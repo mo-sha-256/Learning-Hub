@@ -1,0 +1,123 @@
+## Organizational Understanding
+
+- What is the strategic direction, What are key drivers?
+- Why cloud?
+- What are you're 3 wishes for your IT Department.
+  - Common Answers:
+    - From Capex to opex
+    - Cost Savings
+    - Security
+    - scaleability
+    - speed of innovation that we can't do.
+- Is there a compelling event?
+  - have to be out of DC
+  - corporate migration
+  - Merger
+  - What is the time to migrate and what's the budget.
+- Ideal Target Stack
+  - Tech Debt, legacy systems
+  - all in on containers
+  - all in on DB's
+  - All in AKS
+  - What is the ideal end state?
+- How are we going to utlize the 7r's?
+- Migration approach
+  - lift and shift- rehost
+  - Relocate
+  - rearchitect/refactor
+  - replatform/rebuild
+  - repurchase
+  - retire
+  - retain
+- What are the requirements?
+  - regulatory
+  - corporate
+
+## What's Next
+
+- Skilling
+  - Educate on Azure
+  - Educate on devops
+  - Educate on IAC.
+  - Provide platform to learn.
+  - provide time to learn.
+  - sandbox enviornments available to use. Controls for cost and rbac in place.
+
+- Identity
+  - Entra ID Tenent
+  - pick one single identity provider
+  - conditional access controls, risks, signals, etc
+  - utilize one source of truth.
+  - users, apps, devices that would use this.
+  - strong policy around identity
+
+- Which regions are we going to use?
+  - where are the customer or where is it getting consumed from?
+  - want at least two that are far apart.
+  - availability zones will be needed.
+  - pick regions where it's going to be consumed and not look at where DC's are today.
+- Governance
+  - Need to define the policy in cloud first.
+  - standards (naming, tags,)
+  - structure (resource groups, mgmt groups,subscriptions)
+  - policies- RBAC- minimum possible needed (Just Enough) Just in time (hour only when you actually need it)
+  - Need to know what the corporate req's are.
+  - Secrets, Keys & Secrets
+- IAC & Devops 
+  - Deployment strategy-Region 1, then to 2, then to 3.
+  - Dev test want to run in west central us cause it gets the updates early.
+  - do testing like load testing (jmeter scripts) & chaos studio (simulate different type of DC failures)
+  - need good processes in devops.
+- Standards for HA, DR & Backup
+  - based on SLA and SLO.
+- Finops model
+  - showback
+  - chargeback
+  - cost optimization use azure advisor to help.
+  - can you use a savings plan.
+  - Auto Scaling will be part of finaps and ha, dr and backup.
+- Monitoring Strategy
+  - Monitor resources and apps
+  - Need a strong baseline so you know it's not performing as intended.
+  - Dashboards
+  - Alerting
+  - Automation
+- Networking- what do you want.
+  - express route
+  - site to site vpn
+  - vitual wan
+  - private link
+  - NSG
+  - hub & spoke
+- Operations
+  - Define expectations
+  - maintenance schedules
+  - service health alerts
+- Security
+  -need to define and have this baked into everything.
+- Central Architecture team
+  - This team Defines the standards
+  - create reusable patterns
+  - Avoid wasted time
+  - Encourage good processes
+  - Consistency
+  - quality
+  - which will lead to easier support.
+  - provide help for app team to consult with central team.
+- Applications
+  - Understand (as is, to be architecture)
+  - what is the update cycle and process
+  - what is the load?
+  - What is the roadmap/ growth
+  - What are the requirements
+  - SLA, SLO, SLI RTO and RPO
+  - Strategic Direction
+  - What are the pain points
+
+## Resources to help.
+  - [Cloud Adoption Framework](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbTc3X1hleVd2RnBhVVNueW5xOUJjOU9HM3RBQXxBQ3Jtc0trSnM5WjJnQ3BfNDRza0ZuRnhZU1FYMGpCVWpZazlWeUVPTnZFaF9xUVFfQXR0dEZtY2JPOWpObXR0d0dlOWw3azFQS2Vid3lPRS1WTjR2WlN1SGt3NHNiU3NLdUJrVW1qR2YyWmVVWS1YWmZaeDJhcw&q=https%3A%2F%2Flearn.microsoft.com%2Fazure%2Fcloud-adoption-framework%2F&v=T7neX1i6iF0)
+  - [Well Architected Framework](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHU2NnY4YTZnRTNmc2lobFppd1VBd3RZZWFJd3xBQ3Jtc0tsdVhST1oyWHhtMlBOZmpla3YtWkp5aHc5SUF1cHNEZzdCNVY1NUxCald1S3JzaGc4VVZZMURFaFh5eTQzcFhFRmlOdV9rOFRoVDduWnlmZ3JGY2Nvc1dzX01VUUZFVUlja3gxUC1jSmlLMmxmakFhOA&q=https%3A%2F%2Flearn.microsoft.com%2Fazure%2Fwell-architected%2F&v=T7neX1i6iF0)
+  - [Landing Zones](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbW56eVRySGY3bnV4NVV5Tnh1aW51eWlpSXhhQXxBQ3Jtc0tsT3pjdE44dnluc3JWb3NWMmpoNnZFRUdYb0FCZC0xZkZpa3g0RHY4T3FwdksyWGRNTE83UWZHR0JFLXprb2M1ZURWVVdhQVQwLURKeDZXdzNSanZwcnh2RWtBVDVhcC1QaDRicXlCUmVpVFNrSEFLOA&q=https%3A%2F%2Flearn.microsoft.com%2Fazure%2Farchitecture%2Flanding-zones%2Flanding-zone-deploy&v=T7neX1i6iF0)
+  - [Full Video for Reference](https://www.youtube.com/watch?v=T7neX1i6iF0)
+
+![White Board Image](https://raw.githubusercontent.com/johnthebrit/RandomStuff/master/Whiteboards/AdoptingAzure.png)
